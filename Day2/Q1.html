@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search character in string</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h4>Search character in a string</h4>
+        <label>Enter string:</label>
+        <input type="text" id="text1">
+    </br>
+    </br>
+        <label>Enter character:</label>
+        <input type="text" id="text2">
+    </br>
+</br>
+        <input type="submit" name="Search" onclick="Search()">
+        <p  id="answer"></p>
+
+    </div>
+        
+    
+    <script>
+        function Search(){
+            var text1 = document.getElementById("text1").value;
+            var char = document.getElementById("text2").value;
+
+            var res = text1.search(char);
+            document.getElementById("answer").innerHTML=res;
+        }
+    </script>
+</body>
+</html>
