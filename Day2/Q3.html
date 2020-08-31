@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Search for element in array of string
+        </title>
+    </head>
+    <body>
+        <div style="text-align: center;">
+            Enter String to be searched:
+            <input type="text" id="find">
+            <br>
+            <br>
+            <button onclick="Search()">Search</button>
+            <p id="answer"></p>
+        </div>
+        <script>
+            function Search(){
+                let ar = ["ABC","DEF","GHI","JKL","MNO"];
+                var a = document.getElementById("find").value;
+                var show = ar.includes(a);
+                if(show)
+                   document.getElementById("answer").innerHTML = a + " is available in the array";
+                else
+                   document.getElementById("answer").innerHTML = a + " is not available in the array"; 
+            }
+        </script>
+    </body>
+</html>
